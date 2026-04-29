@@ -3,20 +3,16 @@
 /out-tsc/
 /tmp/
 /coverage/
-/e2e/test-output/
 /.angular/
 .angular/
 
-# Node modules and dependency files
+# Node modules
 /node_modules/
-/package-lock.json
-/yarn.lock
 
 # Environment files
 /.env
 
-# Angular CLI and build artefacts
-/.angular-cli.json
+# Angular CLI
 /.ng/
 
 # TypeScript cache
@@ -26,3 +22,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/mcp.json
+
+# OS
+.DS_Store
+Thumbs.db
