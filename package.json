@@ -11,6 +11,7 @@
   "private": true,
   "packageManager": "npm@11.12.1",
   "dependencies": {
+    "@angular/cdk": "^21.2.9",
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
     "@angular/core": "^21.2.0",
@@ -29,6 +30,7 @@
     "ng-packagr": "^21.2.0",
     "prettier": "^3.8.1",
     "tailwindcss": "^4.2.4",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }

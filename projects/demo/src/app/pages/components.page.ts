@@ -1,12 +1,87 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { UIButtonDirective } from '@aria-ng/ui';
+import {
+  UIButtonDirective,
+  UILabelDirective,
+  UIInputDirective,
+  UICheckboxComponent,
+  UISwitchComponent,
+  UITabsComponent,
+  UITabListDirective,
+  UITabDirective,
+  UITabPanelDirective,
+  UIAccordionComponent,
+  UIAccordionItemComponent,
+  UIAccordionTriggerDirective,
+  UIAccordionContentDirective,
+  UITooltipDirective,
+  ToastService,
+  UIToastContainerComponent,
+  UIPopoverComponent,
+  UIPopoverTriggerDirective,
+  UIPopoverContentDirective,
+  UIDialogComponent,
+  UIDialogTriggerDirective,
+  UIDialogContentDirective,
+  UIDialogHeaderDirective,
+  UIDialogTitleDirective,
+  UIDialogBodyDirective,
+  UIDialogFooterDirective,
+  UIDialogCloseDirective,
+  UIDropdownMenuComponent,
+  UIDropdownMenuTriggerDirective,
+  UIDropdownMenuContentDirective,
+  UIDropdownMenuItemDirective,
+  UIDropdownMenuSeparatorDirective,
+  UIDropdownMenuLabelDirective,
+} from '@aria-ng/ui';
 
 @Component({
   selector: 'app-components',
   standalone: true,
-  imports: [RouterLink, UIButtonDirective],
+  imports: [
+    RouterLink,
+    UIButtonDirective,
+    UILabelDirective,
+    UIInputDirective,
+    UICheckboxComponent,
+    UISwitchComponent,
+    UITabsComponent,
+    UITabListDirective,
+    UITabDirective,
+    UITabPanelDirective,
+    UIAccordionComponent,
+    UIAccordionItemComponent,
+    UIAccordionTriggerDirective,
+    UIAccordionContentDirective,
+    UITooltipDirective,
+    UIToastContainerComponent,
+    UIPopoverComponent,
+    UIPopoverTriggerDirective,
+    UIPopoverContentDirective,
+    UIDialogComponent,
+    UIDialogTriggerDirective,
+    UIDialogContentDirective,
+    UIDialogHeaderDirective,
+    UIDialogTitleDirective,
+    UIDialogBodyDirective,
+    UIDialogFooterDirective,
+    UIDialogCloseDirective,
+    UIDropdownMenuComponent,
+    UIDropdownMenuTriggerDirective,
+    UIDropdownMenuContentDirective,
+    UIDropdownMenuItemDirective,
+    UIDropdownMenuSeparatorDirective,
+    UIDropdownMenuLabelDirective,
+  ],
   templateUrl: './components.page.html',
   styleUrl: './components.page.css',
 })
-export class ComponentsPage {}
+export class ComponentsPage {
+  readonly toastService = inject(ToastService);
+
+  readonly checkboxChecked = signal(false);
+  readonly switchChecked = signal(false);
+  readonly activeTab = signal('preview');
+  readonly dialogOpen = signal(false);
+}

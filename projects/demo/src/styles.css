@@ -1,5 +1,6 @@
-@import "tailwindcss";
-@import "../../ui/src/lib/styles/theme.css";
+@import 'tailwindcss';
+@import '../../ui/src/lib/styles/theme.css';
+@plugin 'tailwindcss-animate';
 
 body {
   font-family:
